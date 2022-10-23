@@ -3,7 +3,7 @@
 const search = document.querySelector(".searchBox");
 const convert = document.querySelector(".convert");
 const fromCurrecy = document.querySelector(".from");
-var toCurrecy = document.querySelector(".to");
+const toCurrecy = document.querySelector(".to");
 const finalValue = document.querySelector(".finalValue");
 const finalAmount = document.getElementById("finalAmount");
 let resultFrom;
