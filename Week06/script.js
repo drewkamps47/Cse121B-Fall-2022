@@ -7,8 +7,8 @@ var toCurrecy = document.querySelector(".to");
 const finalValue = document.querySelector(".finalValue");
 const finalAmount = document.getElementById("finalAmount");
 let resultFrom;
-let resultTo;
-let searchValue;
+var resultTo;
+var searchValue;
   
 // EventListener when currency is changed
 fromCurrecy.addEventListener('change', (event) => {
