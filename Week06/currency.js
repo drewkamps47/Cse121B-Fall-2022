@@ -26,7 +26,7 @@ function updateValue(e) {
     searchValue = e.target.value;
 }
   
-// when user clicks, it calls function getresults 
+// when user clicks, it calls function get the results 
 convert.addEventListener("click", getResults);
   
 // function to get results including an API for currency conversion
