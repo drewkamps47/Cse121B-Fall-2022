@@ -1,36 +1,36 @@
-
-// Form controls to select from
-const search = document.querySelector(".searchBox");
-const convert = document.querySelector(".convert");
-const fromCurrecy = document.querySelector(".from");
-const toCurrecy = document.querySelector(".to");
-const finalValue = document.querySelector(".finalValue");
-const finalAmount = document.getElementById("finalAmount");
-let resultFrom;
-let resultTo;
-let searchValue;
-
+ 
+// This is a form with different controls to choose from
+var search = document.querySelector(".searchBox");
+var convert = document.querySelector(".convert");
+var fromCurrecy = document.querySelector(".from");
+var toCurrecy = document.querySelector(".to");
+var finalValue = document.querySelector(".finalValue");
+var finalAmount = document.getElementById("finalAmount");
+var resultFrom;
+var resultTo;
+var searchValue;
+  
 // EventListener when currency is changed
 fromCurrecy.addEventListener('change', (event) => {
     resultFrom = `${event.target.value}`;
 });
   
+// EventListener when currency is changed
 toCurrecy.addEventListener('change', (event) => {
     resultTo = `${event.target.value}`;
 });
   
 search.addEventListener('input', updateValue);
   
-// function for updating value
+// Function for updating the value
 function updateValue(e) {
     searchValue = e.target.value;
 }
   
-// when user clicks, it calls function get the results 
+// When the user clicks, it calls function get results 
 convert.addEventListener("click", getResults);
   
-// function to get results including an API for currency conversion
-
+// This function gets the results and includes an API call 
 const api = "https://api.exchangerate-api.com/v4/latest/USD";
 function getResults() {
     fetch(`${api}`)
@@ -39,7 +39,7 @@ function getResults() {
         }).then(displayResults);
 }
   
-// display results after convertion
+// This function displays results after convertion
 function displayResults(currency) {
     let fromRate = currency.rates[resultFrom];
     let toRate = currency.rates[resultTo];
@@ -48,7 +48,7 @@ function displayResults(currency) {
     finalAmount.style.display = "block";
 }
   
-// when user click on reset button
+//This function clears the form when the user clicks clear button
 function clearVal() {
     window.location.reload();
     document.getElementsByClassName("finalValue").innerHTML = "";
