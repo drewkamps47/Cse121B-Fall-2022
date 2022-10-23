@@ -1,14 +1,14 @@
  
 // This is a form with different controls to choose from
-var search = document.querySelector(".searchBox");
-var convert = document.querySelector(".convert");
-var fromCurrecy = document.querySelector(".from");
+const search = document.querySelector(".searchBox");
+const convert = document.querySelector(".convert");
+const fromCurrecy = document.querySelector(".from");
 var toCurrecy = document.querySelector(".to");
-var finalValue = document.querySelector(".finalValue");
-var finalAmount = document.getElementById("finalAmount");
-var resultFrom;
-var resultTo;
-var searchValue;
+const finalValue = document.querySelector(".finalValue");
+const finalAmount = document.getElementById("finalAmount");
+let resultFrom;
+let resultTo;
+let searchValue;
   
 // EventListener when currency is changed
 fromCurrecy.addEventListener('change', (event) => {
